@@ -196,43 +196,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "breakwater"
-version = "0.1.0"
-dependencies = [
- "ansi_term",
- "anyhow",
- "async-ctrlc",
- "bytes",
- "chrono",
- "csv",
- "env_logger",
- "futures",
- "geo",
- "hdrhistogram",
- "hyper",
- "kdtree",
- "lazy_static",
- "log",
- "memcache",
- "minstant",
- "mongodb",
- "nix 0.24.3",
- "prost",
- "serde",
- "serde_json",
- "shellexpand",
- "structopt",
- "thiserror",
- "tokio",
- "tokio-anyfd",
- "toml",
- "tonic",
- "tonic-build",
- "url",
- "walkdir",
-]
-
-[[package]]
 name = "bson"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1121,6 +1084,43 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "80ee359328fc9087e9e3fc0a4567c4dd27ec69a127d6a70e8d9dd22845b8b1a2"
 dependencies = [
  "num-traits",
+]
+
+[[package]]
+name = "khudib"
+version = "0.1.0"
+dependencies = [
+ "ansi_term",
+ "anyhow",
+ "async-ctrlc",
+ "bytes",
+ "chrono",
+ "csv",
+ "env_logger",
+ "futures",
+ "geo",
+ "hdrhistogram",
+ "hyper",
+ "kdtree",
+ "lazy_static",
+ "log",
+ "memcache",
+ "minstant",
+ "mongodb",
+ "nix 0.24.3",
+ "prost",
+ "serde",
+ "serde_json",
+ "shellexpand",
+ "structopt",
+ "thiserror",
+ "tokio",
+ "tokio-anyfd",
+ "toml",
+ "tonic",
+ "tonic-build",
+ "url",
+ "walkdir",
 ]
 
 [[package]]

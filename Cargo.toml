@@ -1,17 +1,17 @@
 [package]
-name = "breakwater"
+name = "khudib"
 version = "0.1.0"
 edition = "2021"
 build = "build.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [[bin]]
-name = "breakwater-server"
-path = "src/breakwater/server.rs"
+name = "khudib-server"
+path = "src/server_app/server.rs"
 
 [[bin]]
-name = "breakwater-client"
-path = "src/breakwater/client.rs"
+name = "khudib-client"
+path = "src/client_app/client.rs"
 
 [[bin]]
 name = "geo"

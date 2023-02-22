@@ -1,8 +1,8 @@
 const PROTO_DIR: &str = "proto";
 const PROTOS: &[&str] = &[
     "proto/geo.proto",
-    //"proto/rate.proto",
-    //"proto/profile.proto",
+    "proto/rate.proto",
+    "proto/profile.proto",
     "proto/search.proto",
     "proto/breakwater.proto",
 ];
