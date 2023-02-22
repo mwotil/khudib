@@ -1,0 +1,37 @@
+name = "hotel_microservices"
+description = "Run hotel_microservices"
+group = "hotel_microservices"
+timeout_secs = 600
+start_delay = 5
+
+[[worker]]
+host = "danyang-06"
+bin = "geo"
+args = "--config eval/config.json"
+term = 2
+
+[[worker]]
+host = "danyang-06"
+bin = "rate"
+args = "--config eval/config.json"
+term = 2
+
+[[worker]]
+host = "danyang-05"
+bin = "profile"
+args = "--config eval/config.json"
+term = 2
+
+[[worker]]
+host = "danyang-04"
+bin = "search"
+args = "--config eval/config.json"
+term = 2
+dependencies = [0, 1]
+
+[[worker]]
+host = "danyang-03"
+bin = "frontend"
+args = "--config eval/config.json"
+term = 2
+dependencies = [0, 1, 2, 3]

@@ -1,0 +1,76 @@
+[package]
+name = "breakwater"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "breakwater-server"
+path = "src/breakwater/server.rs"
+
+[[bin]]
+name = "breakwater-client"
+path = "src/breakwater/client.rs"
+
+[[bin]]
+name = "geo"
+path = "src/geo/main.rs"
+
+#[[bin]]
+#name = "rate"
+#path = "src/rate/main.rs"
+
+[[bin]]
+name = "search"
+path = "src/search/main.rs"
+
+#[[bin]]
+#name = "profile"
+#path = "src/profile/main.rs"
+
+[[bin]]
+name = "frontend"
+path = "src/frontend/main.rs"
+
+[[bin]]
+name = "launcher"
+path = "src/launcher/main.rs"
+
+
+[dependencies]
+tonic = "0.8.1"
+prost = "0.11.0"
+
+structopt = "0.3.23"
+futures = "0.3"
+anyhow = "1.0.64"
+mongodb = { version = "2.3.0" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+kdtree = "0.6.0" 
+geo = "0.23.0"
+chrono = "0.4.22"
+env_logger = "0.9.0"
+log = "0.4.17"
+memcache = "0.16.0"
+tokio = { version = "1.21.0", default_features=false, features = ["rt"] }
+hyper = { version = "0.14", features = ["server", "http1", "http2", "tcp"] }
+url = "2.3.1"
+async-ctrlc = "1.2.0"
+minstant = "0.1.2"
+thiserror = "1.0.34"
+csv = "1.1.6"
+hdrhistogram = "7.5.0"
+
+lazy_static = "1.4.0"
+nix = { version = "0.24.1", default-features = false, features = ["signal"] }
+tokio-anyfd = "0.2.0"
+bytes = "1.1.0"
+toml = "0.5.9"
+walkdir = "2.3.2"
+ansi_term = "0.12.1"
+shellexpand = "2.1.0"
+
+[build-dependencies]
+tonic-build = "0.8.0"
