@@ -4,7 +4,7 @@ const PROTOS: &[&str] = &[
     "proto/rate.proto",
     "proto/profile.proto",
     "proto/search.proto",
-    "proto/breakwater.proto",
+    "proto/khudib.proto",
 ];
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {

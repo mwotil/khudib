@@ -14,6 +14,14 @@ name = "khudib-client"
 path = "src/client_app/client.rs"
 
 [[bin]]
+name = "khudib-server_sidecar"
+path = "src/server_sidecar/server_sidecar.rs"
+
+[[bin]]
+name = "khudib-client_sidecar"
+path = "src/client_sidecar/client_sidecar.rs"
+
+[[bin]]
 name = "geo"
 path = "src/geo/main.rs"
 
@@ -50,7 +58,7 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 kdtree = "0.6.0" 
 geo = "0.23.0"
-chrono = "0.4.22"
+chrono = "0.4.23"
 env_logger = "0.9.0"
 log = "0.4.17"
 memcache = "0.16.0"
@@ -71,6 +79,11 @@ toml = "0.5.9"
 walkdir = "2.3.2"
 ansi_term = "0.12.1"
 shellexpand = "2.1.0"
+
+#rand = "0.8.5"
+#unique_id = "0.1.5"
+ulid-generator-rs = "0.0.13"
+
 
 [build-dependencies]
 tonic-build = "0.8.0"

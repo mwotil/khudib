@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+//import "google/protobuf/empty.proto";
+
+package khudib;
+
+message bw {
+    int32 id = 1;
+    int32 requests = 2;
+    int32 credits = 3;
+}
+
+
+message BreakwaterRequest {
+    int32 id = 1;
+    int32 requests = 2;
+    int32 credits = 3;
+}
+
+message BreakwaterResponse {
+    bw breakwater = 1;
+}
+
+message Mkhudib {
+    string clientID = 1;
+    string serverID = 2;
+    string requestID = 3;    
+}
+
+message MkhudibP {
+    string pcID = 1;
+    string  psID = 2;
+    int32 credit = 3;
+}
+
+message kRequest {
+    string clientID = 1;
+    string serverID = 2;
+    string requestID = 3;  
+}
+
+message kResponse {
+    Mkhudib khudib = 1;  
+}
+
+message kProxyRequest {
+    string clientID = 1;
+    string serverID = 2;
+    string requestID = 3; 
+    string ClientProxyID = 4;
+    string  ServerProxyID = 5;
+    int32 credit = 6;
+}
+
+message kProxyResponse {
+    kProxyRequest kproxyresponse = 1;
+}
+
+service Breakwater {
+    rpc CreateRequest(BreakwaterRequest) returns (BreakwaterResponse);
+}
+
+//Define a service called khudib
+service Khudib {
+    rpc CreateKhudibRequest (kRequest) returns (kResponse);
+    //rpc CreateKhudibRequestStream (kRequest) returns (stream kResponse);
+}
+
+service KhudibProxy {
+    rpc CreateKhudibProxyRequest (kProxyRequest) returns (kProxyResponse);
+}
